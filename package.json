@@ -8,7 +8,7 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "test": "npx playwright test
+    "test": "npx playwright test"
   },
   "devDependencies": {
     "@playwright/test": "^1.36.2"
