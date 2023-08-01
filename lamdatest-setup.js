@@ -7,6 +7,8 @@ const path = require('path')
 const { chromium } = require('playwright')
 const cp = require('child_process');
 const playwrightClientVersion = cp.execSync('npx playwright --version').toString().trim().split(' ')[1];
+const date = new Date();
+const currentDate = date.getDate() + "-"+(date.getMonth()+1)+"-"+date.getFullYear()+"-"+date.getHours()+'-'+date.getMinutes()+'-'+date.getSeconds();
 
 // LambdaTest capabilities
 const capabilities = {
@@ -14,7 +16,7 @@ const capabilities = {
   'browserVersion': 'latest',
   'LT:Options': {
     'platform': 'Windows 10',
-    'build': 'Playwright JS Build',
+    'build': `Playwright Tests - ${currentDate}`,
     'name': 'Playwright Test',
     'user': process.env.LT_USERNAME,
     'accessKey': process.env.LT_ACCESS_KEY,
