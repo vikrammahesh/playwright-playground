@@ -1,4 +1,10 @@
 tasks:
-  - name: Execute Scripts Task
-    init: npm install
-    command: npm run test
+  - name: Install dependencies and Execute tests
+    init: | 
+        npm install
+        npx playwright install-deps
+        npx playwright install
+    command: |
+        export LT_USERNAME=vikrammahesh
+        export LT_ACCESS_KEY=2WandM0c4ZVSdKJH1Nm4lIh154mrC06kztIMw3iPDLMtJ0G2Nf
+        npm run test
