@@ -5,6 +5,6 @@ tasks:
         npx playwright install-deps
         npx playwright install
     command: |
-        export LT_USERNAME=vikrammahesh
-        export LT_ACCESS_KEY=2WandM0c4ZVSdKJH1Nm4lIh154mrC06kztIMw3iPDLMtJ0G2Nf
+        export LT_USERNAME=<user name>
+        export LT_ACCESS_KEY=<token>
         npm run test
