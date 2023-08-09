@@ -38,22 +38,22 @@ module.exports = defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-    {
-      name: 'chrome:latest:MacOS Ventura@lambdatest',
-      use: {
-        viewport: { width: 1920, height: 1080 }
-      }
-    },
-    {
-      name: 'chrome:latest:Windows 10@lambdatest',
-      use: {
-        viewport: { width: 1920, height: 1080 }
-      }
-    },
     // {
-    //   name: 'chromium',
-    //   use: { ...devices['Desktop Chrome'] },
+    //   name: 'chrome:latest:MacOS Ventura@lambdatest',
+    //   use: {
+    //     viewport: { width: 1920, height: 1080 }
+    //   }
     // },
+    // {
+    //   name: 'chrome:latest:Windows 10@lambdatest',
+    //   use: {
+    //     viewport: { width: 1920, height: 1080 }
+    //   }
+    // },
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+    },
 
     // {
     //   name: 'firefox',
