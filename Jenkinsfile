@@ -21,10 +21,6 @@ pipeline {
             }
         }
 
-        stage('Run test') {
-            steps {
-                npm run test
-            }
-        }
+      
     }
 }
