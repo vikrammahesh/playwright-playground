@@ -17,7 +17,11 @@ pipeline {
 
         stage('Install dependencies') {
             steps {
-                sh 'npm ci'
+                sh  '''
+                    npm ci
+                    npx playwright install-deps
+                    npx playwright install
+                    '''
             }
         }
 
