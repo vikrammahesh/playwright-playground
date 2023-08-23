@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    
+
     triggers {
         pollSCM('* * * * *')
     }
@@ -9,6 +9,18 @@ pipeline {
         stage('Hello') {
             steps {
                 echo 'Hello World'
+            }
+        }
+
+        stage('Install dependencies') {
+            steps {
+                npm ci
+            }
+        }
+
+        stage('Run test') {
+            steps {
+                npm run test
             }
         }
     }
