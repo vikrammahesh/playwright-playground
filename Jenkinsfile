@@ -17,7 +17,13 @@ pipeline {
 
         stage('Install dependencies') {
             steps {
-                npm ci
+                sh 'npm ci'
+            }
+        }
+
+        stage('Tests') {
+            steps {
+                sh 'npm run test'
             }
         }
 
