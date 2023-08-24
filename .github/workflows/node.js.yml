@@ -29,3 +29,16 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+  
+  launch_jenkins_job:
+    name: trigger jenkins job
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Trigger Jenkins Job
+        uses: sbitio/trigger-jenkins-job@master
+        with:
+          JENKINS_USER: admin
+          JENKINS_TOKEN: 1126df72b1f4776cffd9493af6ab4ca3cb
+          JENKINS_HOST: http://52.195.218.174:8080/
+          JENKINS_JOB: Playwright sample
