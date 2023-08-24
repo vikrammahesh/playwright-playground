@@ -17,8 +17,8 @@ pipeline {
             steps {
                 sh  '''
                     npm ci
-                    npx playwright install-deps
-                    npx playwright install
+                    sudo npx playwright install-deps
+                    sudo npx playwright install
                     '''
             }
         }
