@@ -41,4 +41,4 @@ jobs:
           JENKINS_USER: admin
           JENKINS_TOKEN: 1126df72b1f4776cffd9493af6ab4ca3cb
           JENKINS_HOST: http://52.195.218.174:8080/
-          JENKINS_JOB: Playwright sample
+          JENKINS_JOB: "Playwright sample"
