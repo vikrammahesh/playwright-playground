@@ -34,11 +34,12 @@ jobs:
     name: trigger jenkins job
     runs-on: ubuntu-latest
     steps:
-      -
-        name: Trigger Jenkins Job
-        uses: sbitio/trigger-jenkins-job@master
+      - name: Trigger jenkins job
+        uses: jabbukka/jenkins-trigger@main
         with:
-          JENKINS_USER: admin
-          JENKINS_TOKEN: 1126df72b1f4776cffd9493af6ab4ca3cb
-          JENKINS_HOST: http://52.195.218.174:8080/
-          JENKINS_JOB: "Playwright sample"
+          url: http://52.195.218.174:8080/
+          job_name: "Playwright sample"
+          user_name: admin
+          api_token: 1126df72b1f4776cffd9493af6ab4ca3cb
+          wait: "true"
+          timeout: "1000"
